@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rodrigo-test
+spec:
+  selector:
+    matchLabels:
+      app: rodrigo-test
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rodrigo-test
+    spec:
+      containers:
+        - image: nginx:1.25.2
+          name: rodrigo-nginx-test
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
