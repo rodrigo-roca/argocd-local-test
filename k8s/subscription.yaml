@@ -1,7 +1,0 @@
-apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  annotations:
-    notifications.argoproj.io/subscribe.cd-visibility-trigger.cd-visibility-webhook: ""
-    dd_env: test
-    dd_service: rodrigo-test
