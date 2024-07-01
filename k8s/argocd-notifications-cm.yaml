@@ -3,8 +3,6 @@ kind: ConfigMap
 metadata:
   name: argocd-notifications-cm
 data:
-
-  # trigger: when to send the webhook
   trigger.on-sync-succeeded: |
     - when: app.status.operationState.phase in ['Succeeded', 'Failed', 'Error'] and app.status.health.status in ['Healthy', 'Degraded']
       send: [cd-visibility-template]
