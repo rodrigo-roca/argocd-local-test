@@ -1,5 +1,5 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: AppProject
 metadata:
   annotations:
     notifications.argoproj.io/subscribe.cd-visibility-trigger.cd-visibility-webhook: ""
