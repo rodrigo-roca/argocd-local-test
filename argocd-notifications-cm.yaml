@@ -1,7 +1,9 @@
+# k apply -f ~/dd/argocd-local-test/argocd-notifications-cm.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: argocd-notifications-cm
+  namespace: argocd
 data:
   trigger.on-sync-succeeded: |
     - when: app.status.operationState.phase in ['Succeeded', 'Failed', 'Error'] and app.status.health.status in ['Healthy', 'Degraded']
